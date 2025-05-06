@@ -1,6 +1,6 @@
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
@@ -15,6 +15,16 @@ int	main()
 	char c = ((int)9);
 
 	int d = 0;
-	printf("%d", ft_isdigit(d));
-	printf("%d", isdigit(d));
+	printf("Original Function. Input(1): %d \n", ft_isdigit(1));
+	printf("In-built Function. Input(1): %d \n", isdigit(1));
+
+	printf("In-built Function. Input('1'): %d \n", ft_isdigit('1'));
+	printf("In-built Function. Input('1'): %d \n", isdigit('1'));
+
+	printf("\nOriginal Function. Input(-1): %d \n", ft_isdigit(-1));
+	printf("In-built Function. Input(-1): %d \n", isdigit(-1));
+
+	
+	printf("\nOrigin  Function. Input('a'); %d \n", ft_isdigit('a'));
+	printf("In-built Function. Input('a');  %d \n", isdigit('a'));
 }
