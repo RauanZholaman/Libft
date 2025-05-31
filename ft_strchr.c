@@ -17,7 +17,7 @@ int main()
 {
 	char s[] = "Jerrp,";
 
-	char c = '#';
+	char c = '_';
 
 	char *p = strchr(s, c);
 	char *d = ft_strchr(s, c);
