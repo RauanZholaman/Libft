@@ -30,7 +30,7 @@ int		ft_strlen(const char *str)
 	return (i);
 }
 
-char *ft_strnstr(const char *s1, const char *s2, size_t len)
+char *ft_strnstr(const char *s1, const char *s2, size_t len)	
 {
 	size_t		i;
 	size_t		s2_size;
@@ -40,18 +40,13 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 	if (len < s2_size)
 		return (0);
 	if (*s2 == '\0')
-	{
 		return (char *)s1;
-	}
-	else
+	while (*s1 != '\0' && (i <= len - s2_size))
 	{
-		while (i <= len)
-		{
-			if (ft_strncmp(s1 + i, s2, s2_size) == 0)
-				return (char *)s1 + i;
-			i++;
-		}	
-	}
+		if (ft_strncmp(s1 + i, s2, s2_size) == 0)
+			return (char *)s1 + i;
+		i++;
+	}	
 	return (0);
 }
 
@@ -59,12 +54,12 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 
 int main()
 {
-	char w1[] = "Hello!";
-	char w2[] = "Hel";
+	// char w1[] = "abc\0xyz!";
+	// char w2[] = "x";
 
-	printf("My ft_strnstr function: %s", ft_strnstr(w1, w2, 5));
+	printf("My ft_strnstr function: %s", ft_strnstr("Hello", "lo", 5));
 
-	printf("\n\nEmpty needle: %s\n", ft_strnstr("hello", "", 5)); 	// Should return "hello"
+	printf("\nEmpty needle: %s\n", ft_strnstr("hello", "", 5)); 	// Should return "hello"
     printf("Empty haystack: %s\n", ft_strnstr("", "abc", 3)); 		// NULL
     printf("Zero len: %s\n", ft_strnstr("hello", "he", 0)); 		// NULL
     printf("Len < needle: %s\n", ft_strnstr("hello", "hello", 4)); 	// NULL
