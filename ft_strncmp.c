@@ -34,24 +34,29 @@ int	main()
 	printf("\n");
 
 	printf("Test case 1: First character comparison\n");
-    	printf("Original strncmp: %d\n", strncmp(w1, w2, 1));
-    	printf("The result of my function: %d\n", ft_strncmp(w1, w2, 1));
-        printf("\n");
+	printf("Original strncmp: %d\n", strncmp(w1, w2, 1));
+	printf("The result of my function: %d\n", ft_strncmp(w1, w2, 1));
+	printf("\n");
 	
 	char same1[] = "Hello";
     	char same2[] = "Hello";
 	printf("Test case 2: Same strings\n");
-    	printf("Original strncmp: %d\n", strncmp(same1, same2, 5));
-    	printf("The result of my function: %d\n", ft_strncmp(same1, same2, 5));
-    	printf("\n");
+	printf("Original strncmp: %d\n", strncmp(same1, same2, 5));
+	printf("The result of my function: %d\n", ft_strncmp(same1, same2, 5));
+	printf("\n");
 
 	printf("Test case 3: n=0\n");
-    	printf("Original strncmp: %d\n", strncmp("abc", "def", 0));
-    	printf("The result of my function: %d\n", ft_strncmp("abc", "def", 0));
-    	printf("\n");
+	printf("Original strncmp: %d\n", strncmp("abc", "def", 0));
+	printf("The result of my function: %d\n", ft_strncmp("abc", "def", 0));
+	printf("\n");
 
 	printf("Test case 4: Empty string\n");
-    	printf("Original strncmp: %d\n", strncmp("", "abc", 3));
-    	printf("The result of my function: %d\n", ft_strncmp("", "abc", 3));
-    	printf("\n");
+	printf("Original strncmp: %d\n", strncmp("", "abc", 3));
+	printf("The result of my function: %d\n", ft_strncmp("", "abc", 3)); // My function return -97 compared to original (-1). Generally, I believe this shouldn't be an issue since the doc does not mentions the magnitude, but rather sign. 
+	printf("\n");
+
+	printf("Test case 5: Comparison with difference\n");
+	printf("Original strncmp: %d\n", strncmp(w1, w2, 3));
+	printf("The result of my function: %d\n", ft_strncmp(w1, w2, 3));
+	printf("\n");
 }
