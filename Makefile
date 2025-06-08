@@ -2,18 +2,25 @@ CFLAGS = -Wall -Wextra -Werror
 СС = gcc
 
 SRC = ft_atoi.c ft_isdigit.c
-OBJ = $(SRC:c=.o)
+OBJ = $(SRC:.c=.o) 
 
-libft.a: ft_atoi.o 
-	$(CC) -o libft libft.o
+NAME = libft.a
 
-libft.o: ft_atoi.c libft.h
-	$(CC) -c ft_atoi.c
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@echo "Linking all object files into one executable" 
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	@echo "Compiling source files into objects"
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	@echo "Cleaning up all object files"
 	rm -f *.o libft
 
-	
+fclean: clean
+	rm -f $(NAME)
 
-
-
+re: fclean all
