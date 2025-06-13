@@ -8,8 +8,8 @@ int	ft_isascii(int d)
 #include <stdio.h>
 #include <ctype.h>
 
-int main()
+/*int main()
 {
 	printf("My function: %d\n", ft_isascii('='));
 	printf("Original Function: %d\n", isascii('='));
-}
+}*/

@@ -8,8 +8,8 @@ int	ft_isprint(int d)
 #include <stdio.h>
 #include <ctype.h>
 
-int main()
+/*int main()
 {
 	printf("My function: %d\n", ft_isprint(','));
 	printf("Original function: %d\n", isprint(','));
-}
+}*/

@@ -1,4 +1,4 @@
-int	ft_isalpha(int c)
+/*int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
@@ -11,6 +11,9 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+*/
+
+#include "libft.h"
 
 int	ft_isalnum(int d)
 {
@@ -22,8 +25,8 @@ int	ft_isalnum(int d)
 #include <stdio.h>
 #include <ctype.h>
 
-int	main()
+/*int	main()
 {
 	printf("%d\n", ft_isalnum('1'));
 	printf("%d\n", isalnum('1'));
-}
+}*/
