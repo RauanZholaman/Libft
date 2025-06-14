@@ -1,9 +1,11 @@
-int	ft_isalpha(unsigned char c)
+#include "libft.h"
+
+/*int	ft_isalpha(unsigned char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
-}
+}*/
 
 int	ft_toupper(int d)
 {
@@ -18,7 +20,7 @@ int	ft_toupper(int d)
 		return (d);
 	}
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 
@@ -33,3 +35,4 @@ int main()
 	printf("My function: %c\n", ft_toupper('V'));
 	printf("Original function: %c\n", toupper('V'));
 }
+*/

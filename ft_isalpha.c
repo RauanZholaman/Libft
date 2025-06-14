@@ -6,9 +6,10 @@
 /*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 17:01:13 by rzholama          #+#    #+#             */
-/*   Updated: 2025/05/06 17:01:34 by rzholama         ###   ########.fr       */
+/*   Updated: 2025/06/14 17:12:48 by rzholama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isalpha(unsigned char c)
 {

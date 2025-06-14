@@ -1,6 +1,6 @@
-#include <stddef.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+/*static int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
@@ -29,7 +29,7 @@ int		ft_strlen(const char *str)
 	}
 	return (i);
 }
-
+*/
 char *ft_strnstr(const char *s1, const char *s2, size_t len)	
 {
 	size_t		i;
@@ -49,7 +49,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 	}	
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -69,4 +69,4 @@ int main()
     printf("Match at end: %s\n", ft_strnstr("hello", "lo", 5)); 	// Pointer to "lo"
     printf("Case mismatch: %s\n", ft_strnstr("Hello", "hello", 5)); // NULL
 
-}
+}*/

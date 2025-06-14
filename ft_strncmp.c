@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -16,7 +16,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -59,4 +59,4 @@ int	main()
 	printf("Original strncmp: %d\n", strncmp(w1, w2, 3));
 	printf("The result of my function: %d\n", ft_strncmp(w1, w2, 3));
 	printf("\n");
-}
+}*/

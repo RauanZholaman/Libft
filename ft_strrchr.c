@@ -1,5 +1,4 @@
-#include <stddef.h>
-#include "MSlib.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -14,7 +13,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -28,4 +27,5 @@ int	main()
 	char *n_word = ft_strrchr(s, c);
 
 	printf("String given is: (%s), and the char: (%c). strrchr():    %s.\n", s, c, word);
-	printf("String given is: (%s), and the char: (%c). ft_strrchr(): %s.\n", s, c, n_word);}
+	printf("String given is: (%s), and the char: (%c). ft_strrchr(): %s.\n", s, c, n_word);
+}*/

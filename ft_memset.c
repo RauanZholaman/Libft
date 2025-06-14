@@ -12,7 +12,6 @@ void	*ft_memset(void *str, int c, size_t n)
 		s[i] = (unsigned char)c;
 		i++;
 	}
-
 	return (str);
 }
 /*
