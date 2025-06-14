@@ -9,17 +9,25 @@ SRC = ft_atoi.c ft_isdigit.c \
       ft_bzero.c ft_memcpy.c \
       ft_memmove.c ft_memchr.c \
       ft_memcmp.c ft_calloc.c \
-      ft_strdup.c
+      ft_strdup.c ft_substr.c \
+      ft_strchr.c ft_strnstr.c \
+      ft_tolower.c ft_toupper.c \
+      ft_strrchr.c ft_strncmp.c \
 
 OBJ = $(SRC:.c=.o) 
 
 NAME = libft.a
 
+HEADER = libft.h
+
 all: $(NAME)
 
-$(NAME): $(OBJ)
+my_program: $(OBJ)
 	@echo "Linking all object files into one executable" 
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o my_program
+
+$(NAME): $(OBJ) $(HEADER)
+	ar rcs $(NAME) $(OBJ) 
 
 %.o: %.c
 	@echo "Compiling source files into objects"
