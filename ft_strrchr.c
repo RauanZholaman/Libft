@@ -2,30 +2,32 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
+	unsigned char check;
 	int	s_leng;
 	
 	s_leng = ft_strlen(str);
-	while (s_leng + 1 != 0)
+	check = c;
+	while (s_leng >= 0)
 	{
-		if (str[s_leng] == c)
+		if (str[s_leng] == check)
 			return ((char *)str + s_leng);
 		s_leng--;
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
-int	main()
-{
-	char s[] = "ABCDERFDDS 1_--@#\t$dd";
+// #include <stdio.h>
+// #include <string.h>
 
-	char c = 'D';
+// int	main()
+// {
+// 	char s[] = "Hello";
 
-	char *word = strrchr(s, c);
-	char *n_word = ft_strrchr(s, c);
+// 	char c = 'H';
 
-	printf("String given is: (%s), and the char: (%c). strrchr():    %s.\n", s, c, word);
-	printf("String given is: (%s), and the char: (%c). ft_strrchr(): %s.\n", s, c, n_word);
-}*/
+// 	char *word = strrchr(s, c);
+// 	char *n_word = ft_strrchr(s, c);
+
+// 	printf("String given is: (%s), and the char: (%c). strrchr():    %s.\n", s, c, word);
+// 	printf("String given is: (%s), and the char: (%c). ft_strrchr(): %s.\n", s, c, n_word);
+// }
