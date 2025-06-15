@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int	ft_isdigit(int c);
 int     ft_isalpha(unsigned char c);
