@@ -15,6 +15,7 @@ SRC = ft_atoi.c ft_isdigit.c \
       ft_strrchr.c ft_strncmp.c \
       ft_strjoin.c ft_strtrim.c \
       ft_split.c  ft_itoa.c     \
+      ft_striteri.c ft_strmapi.c \
 
 OBJ = $(SRC:.c=.o) 
 
