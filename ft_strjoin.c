@@ -2,31 +2,31 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	prelen;
-	size_t	suflen;
-	char	*full_len;
+	char	*full_str;
 	size_t	i;
 	size_t	j;
+	size_t	len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
-	prelen = ft_strlen(s1);
-	suflen = ft_strlen(s2);
-	full_len = malloc(prelen + suflen + 1);
-	if (!full_len)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	full_str = malloc(len + 1);
+	if (!full_str)
 		return (NULL);
-	while (i < prelen)
+	while (i < ft_strlen(s1))
 	{
-		full_len[i] = s1[i];
+		full_str[i] = s1[i];
 		i++;
 	}
-	while (j < suflen)
+	while (j < ft_strlen(s2))
 	{
-		full_len[i + j] = s2[j];
+		full_str[i + j] = s2[j];
 		j++;
 	}
-	full_len[prelen + suflen] = '\0';
-	return (full_len);
+	full_str[len] = '\0';
+	return (full_str);
 }
 // #include <stdio.h>
 // int main()

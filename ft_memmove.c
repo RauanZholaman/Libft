@@ -5,7 +5,11 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	const unsigned char *s;
 	unsigned char *d;
 
-	s = (unsigned char*)src;
+	if ((!dst && !src) || n == 0)
+		return (dst);
+	if (dst == src)
+		return (dst);
+	s = (const unsigned char*)src;
 	d = (unsigned char*)dst;
 	if (dst < src)
 		return (ft_memcpy(dst, src, n));
