@@ -1,5 +1,5 @@
 CFLAGS = -Wall -Wextra -Werror
-СС = cc
+CC = cc
 
 SRC = ft_atoi.c ft_isdigit.c \
       ft_isalpha.c ft_isalnum.c \
@@ -22,14 +22,9 @@ SRC = ft_atoi.c ft_isdigit.c \
 OBJ = $(SRC:.c=.o) 
 
 NAME = libft.a
-
 HEADER = libft.h
 
 all: $(NAME)
-
-my_program: $(OBJ)
-	@echo "Linking all object files into one executable" 
-	$(CC) $(OBJ) -o my_program
 
 $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ) 
@@ -40,7 +35,7 @@ $(NAME): $(OBJ) $(HEADER)
 
 clean:
 	@echo "Cleaning up all object files"
-	rm -f *.o libft
+	rm -f *.o
 
 fclean: clean
 	@echo "Cleaning all object files including the program"
