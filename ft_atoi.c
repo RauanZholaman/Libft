@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 06:55:16 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 07:04:26 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_iswhitespace(const char s)
 {
-	return (s == ' ' || s == '\t' || s == '\n' || s == '\v' || s == '\r'|| s == '\f');
+	return (s == ' ' || s == '\t' || s == '\n'
+		|| s == '\v' || s == '\r' || s == '\f');
 }
 
 int	ft_atoi(const char *str)
@@ -25,7 +38,7 @@ int	ft_atoi(const char *str)
 	{
 		num = num * 10 + (*str - '0');
 		str++;
-	}		
+	}
 	if (sign == 1)
 		return (-num);
 	return (num);

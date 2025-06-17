@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 07:20:37 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 07:20:39 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int		numlen(int n)
+static int	numlen(int n)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	if (n == 0)
@@ -17,7 +29,7 @@ static int		numlen(int n)
 	return (i);
 }
 
-static int		ft_isneg(int n)
+static int	ft_isneg(int n)
 {
 	if (n < 0)
 		return (1);

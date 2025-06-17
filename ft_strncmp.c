@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 08:50:14 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 08:51:39 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t		i;
 
 	i = 0;
 	while (i < n)
@@ -51,7 +63,7 @@ int	main()
 
 	printf("Test case 4: Empty string\n");
 	printf("Original strncmp: %d\n", strncmp("", "abc", 3));
-	printf("The result of my function: %d\n", ft_strncmp("", "abc", 3)); // My function return -97 compared to original (-1). Generally, I believe this shouldn't be an issue since the doc does not mentions the magnitude, but rather sign. 
+	printf("The result of my function: %d\n", ft_strncmp("", "abc", 3));
 	printf("\n");
 
 	printf("Test case 5: Comparison with difference\n");

@@ -1,4 +1,16 @@
-//#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 07:16:05 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 12:53:54 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -15,7 +27,6 @@ int	main()
 	unsigned char d = '9';
 
 	int c = (unsigned char)d;
-
 	printf("Original Function. Input(1): %d \n", ft_isdigit(1));
 	printf("In-built Function. Input(1): %d \n", isdigit(1));
 

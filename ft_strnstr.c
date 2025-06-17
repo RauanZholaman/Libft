@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 08:52:15 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 08:53:23 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strnstr(const char *s1, const char *s2, size_t len)	
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t		i;
 	size_t		s2_size;
@@ -8,15 +20,15 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 	i = 0;
 	s2_size = ft_strlen(s2);
 	if (s2_size == 0)
-		return (char *)s1;
+		return ((char *)s1);
 	if (len < s2_size)
 		return (NULL);
 	while (s1[i] != '\0' && (i <= len - s2_size))
 	{
 		if (ft_strncmp(s1 + i, s2, s2_size) == 0)
-			return (char *)s1 + i;
+			return ((char *)s1 + i);
 		i++;
-	}	
+	}
 	return (NULL);
 }
 /*

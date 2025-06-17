@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rzholama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/17 07:41:14 by rzholama          #+#    #+#             */
+/*   Updated: 2025/06/17 07:43:03 by rzholama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    int     i;
+	int		i;
 
-    i = 0;
-    while (s[i] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;
@@ -15,5 +27,6 @@ void    ft_putendl_fd(char *s, int fd)
 
 // int main()
 // {
-// 		ft_putendl_fd("Once upon a time, there was a bang that set the earch spinning around the space.", 1);
+// 		ft_putendl_fd("Once upon a time, the space.", 1);
+//
 // }
