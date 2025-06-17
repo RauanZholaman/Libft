@@ -29,17 +29,28 @@ all: $(NAME)
 $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ) 
 
-%.o: %.c
-	@echo "Compiling source files into objects"
-	$(CC) $(CFLAGS) -c $< -o $@
+BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+             ft_lstsize_bonus.c ft_lstlast_bonus.c \
+             ft_lstadd_back_bonus.c \
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 clean:
-	@echo "Cleaning up all object files"
 	rm -f *.o
 
 fclean: clean
-	@echo "Cleaning all object files including the program"
 	rm -f $(NAME)
 
 re: fclean all
-	@echo "Rebuilding the program"
+
+bonus: $(NAME) .build_bonus
+
+.build_bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
+	ranlib $(NAME)
+	touch .build_bonus
+
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PHONY: all clean fclean re bonus
