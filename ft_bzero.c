@@ -25,19 +25,19 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
-int main()
-{
-	char c[50] = "Hello";
-	char d[50] = "Hello";
+// #include <stdio.h>
+// #include <string.h>
 
-	bzero(c, -2);
-	ft_bzero(d, -2);
+// int main()
+// {
+// 	char c[50] = "Hello";
+// 	char d[50] = "Hello";
 
-	printf("%s\n", c);
-	printf("%s\n", d);
-}
-*/
+// 	bzero(c, 7);
+// 	ft_bzero(d, 7);
+
+// 	printf("%s\n", c);
+// 	printf("%s\n", d);
+// }
+
